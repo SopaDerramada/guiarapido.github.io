@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Site</title>
+  <title>Meus Produtos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #aaa;
+    }
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h2 {
+      margin: 0 0 10px;
+    }
+
+    .card-content p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: block;
+      margin-top: 15px;
+      padding: 15px;
+      text-align: center;
+      background: linear-gradient(135deg, #00ff88, #00ccff);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: opacity 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.8rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>🚀 Meu site no GitHub Pages</h1>
-  <p>Hello Worlld!</p>
+
+<header>
+  <h1>🔥 Produtos Exclusivos</h1>
+  <p>Aprenda, evolua e domine com nossos conteúdos premium</p>
+</header>
+
+<section class="produtos">
+
+  <!-- PRODUTO 1 -->
+  <div class="card">
+    <img src="imagem1.jpg" alt="Produto 1">
+    <div class="card-content">
+      <h2>Produto 1</h2>
+      <p>Descrição curta e direta do produto. Mostre o benefício.</p>
+      <a class="btn" href="LINK_DA_KIWIFY_AQUI" target="_blank">
+        Adquirir agora
+      </a>
+    </div>
+  </div>
+
+  <!-- PRODUTO 2 -->
+  <div class="card">
+    <img src="imagem2.jpg" alt="Produto 2">
+    <div class="card-content">
+      <h2>Produto 2</h2>
+      <p>Outra descrição convincente pra gerar vontade.</p>
+      <a class="btn" href="LINK_DA_KIWIFY_AQUI" target="_blank">
+        Adquirir agora
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 • Todos os direitos reservados
+</footer>
+
 </body>
 </html>
