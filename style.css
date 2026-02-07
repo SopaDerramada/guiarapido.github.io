@@ -8,11 +8,11 @@
 
 /* VARIÁVEIS DE CORES */
 :root {
-    --primary-color: #ff5722;
-    --secondary-color: #673ab7;
-    --text-color: #333;
-    --bg-color: #fff;
-    --hover-color: #ff7043;
+    --bg-color: #0d0d0d;
+    --primary-color: #1e90ff;
+    --secondary-color: #00bfff;
+    --text-color: #e0e0e0;
+    --hover-color: #3399ff;
 }
 
 /* ESTILO GERAL */
@@ -35,9 +35,10 @@ a {
 
 /* CABEÇALHO */
 header {
-    background: var(--primary-color);
-    color: #fff;
+    background: #111;
+    color: var(--text-color);
     padding: 15px 0;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .header-container {
@@ -50,6 +51,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
+    color: var(--primary-color);
 }
 
 .menu {
@@ -59,7 +61,7 @@ header {
 }
 
 .menu li a {
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     transition: color 0.3s;
 }
@@ -77,12 +79,18 @@ header {
 .search-cart input {
     padding: 5px 10px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid var(--primary-color);
+    background: #111;
+    color: var(--text-color);
+}
+
+.search-cart input::placeholder {
+    color: #999;
 }
 
 .cart-btn {
-    background: var(--secondary-color);
-    color: #fff;
+    background: var(--primary-color);
+    color: #000;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -96,16 +104,16 @@ header {
 
 /* BANNER */
 .banner {
-    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
-    color: #fff;
+    background: linear-gradient(135deg, #0d0d0d, #111111), url('https://via.placeholder.com/1200x400/1e90ff/000000?text=Banner') center/cover no-repeat;
+    color: var(--text-color);
     text-align: center;
     padding: 100px 20px;
-    position: relative;
 }
 
 .banner-content h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
 .banner-content p {
@@ -115,7 +123,7 @@ header {
 
 .btn {
     background: var(--secondary-color);
-    color: #fff;
+    color: #000;
     padding: 12px 25px;
     border-radius: 30px;
     transition: all 0.3s;
@@ -140,10 +148,11 @@ header {
 }
 
 .produto-card {
-    background: #f9f9f9;
+    background: #111;
     padding: 20px;
     border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .produto-card img {
@@ -164,13 +173,14 @@ header {
 
 .produto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 /* CATEGORIAS */
 .categorias-section {
     padding: 80px 0;
-    background: #f0f0f0;
+    background: #111;
     text-align: center;
 }
 
@@ -182,18 +192,20 @@ header {
 }
 
 .categoria-card {
-    background: var(--primary-color);
-    color: #fff;
+    background: #111;
+    color: var(--text-color);
     padding: 40px 20px;
+    border: 1px solid var(--primary-color);
     border-radius: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s, border-color 0.3s;
 }
 
 .categoria-card:hover {
-    background: var(--hover-color);
+    background: #0d0d0d;
     transform: translateY(-5px);
+    border-color: var(--secondary-color);
 }
 
 /* PROMOÇÕES */
@@ -210,23 +222,26 @@ header {
 }
 
 .promocao-card {
-    background: var(--secondary-color);
-    color: #fff;
+    background: #111;
+    color: var(--primary-color);
     padding: 40px 20px;
     border-radius: 15px;
-    transition: transform 0.3s;
+    border: 1px solid var(--secondary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .promocao-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--secondary-color);
 }
 
 /* RODAPÉ */
 footer {
-    background: #222;
-    color: #fff;
+    background: #111;
+    color: var(--text-color);
     padding: 30px 0;
     text-align: center;
+    border-top: 1px solid var(--primary-color);
 }
 
 .footer-links {
@@ -238,7 +253,7 @@ footer {
 }
 
 .footer-links li a {
-    color: #fff;
+    color: var(--text-color);
     transition: color 0.3s;
 }
 
