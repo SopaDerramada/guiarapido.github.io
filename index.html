@@ -1,134 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Meus Produtos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: #aaa;
-    }
-
-    .produtos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background: #1a1a1a;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .card-content h2 {
-      margin: 0 0 10px;
-    }
-
-    .card-content p {
-      color: #ccc;
-      font-size: 0.95rem;
-    }
-
-    .btn {
-      display: block;
-      margin-top: 15px;
-      padding: 15px;
-      text-align: center;
-      background: linear-gradient(135deg, #00ff88, #00ccff);
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      transition: opacity 0.3s;
-    }
-
-    .btn:hover {
-      opacity: 0.8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #666;
-      font-size: 0.8rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">ShopeeStore</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="search-cart">
+                <input type="text" placeholder="Buscar produtos...">
+                <button class="cart-btn">🛒</button>
+            </div>
+        </div>
+    </header>
 
-<header>
-  <h1>🔥 Produtos Exclusivos</h1>
-  <p>Aprenda, evolua e domine com nossos conteúdos premium</p>
-</header>
+    <!-- Banner Principal -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h2>Encontre os melhores produtos!</h2>
+            <p>Ofertas incríveis todos os dias na ShopeeStore.</p>
+            <a href="#produtos" class="btn">Ver Produtos</a>
+        </div>
+    </section>
 
-<section class="produtos">
+    <!-- Produtos em Destaque -->
+    <section id="produtos" class="produtos-section">
+        <h2>Produtos em Destaque</h2>
+        <div class="produtos-grid">
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/200" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>R$ 49,90</p>
+                <button class="btn">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/200" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>R$ 89,90</p>
+                <button class="btn">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/200" alt="Produto 3">
+                <h3>Produto 3</h3>
+                <p>R$ 29,90</p>
+                <button class="btn">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/200" alt="Produto 4">
+                <h3>Produto 4</h3>
+                <p>R$ 59,90</p>
+                <button class="btn">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- PRODUTO 1 -->
-  <div class="card">
-    <img src="imagem1.jpg" alt="Produto 1">
-    <div class="card-content">
-      <h2>Produto 1</h2>
-      <p>Descrição curta e direta do produto. Mostre o benefício.</p>
-      <a class="btn" href="https://pay.kiwify.com.br/RZFG1nr?afid=rZkBPxnW" target="_blank">
-        Adquirir agora
-      </a>
-    </div>
-  </div>
+    <!-- Categorias -->
+    <section id="categorias" class="categorias-section">
+        <h2>Categorias Populares</h2>
+        <div class="categorias-grid">
+            <div class="categoria-card">Eletrônicos</div>
+            <div class="categoria-card">Moda</div>
+            <div class="categoria-card">Casa</div>
+            <div class="categoria-card">Beleza</div>
+        </div>
+    </section>
 
-  <!-- PRODUTO 2 -->
-  <div class="card">
-    <img src="imagem2.jpg" alt="Produto 2">
-    <div class="card-content">
-      <h2>Produto 2</h2>
-      <p>Outra descrição convincente pra gerar vontade.</p>
-      <a class="btn" href="LINK_DA_KIWIFY_AQUI" target="_blank">
-        Adquirir agora
-      </a>
-    </div>
-  </div>
+    <!-- Promoções -->
+    <section id="promocoes" class="promocoes-section">
+        <h2>Promoções Especiais</h2>
+        <div class="promocoes-grid">
+            <div class="promocao-card">
+                <h3>Super Desconto 50%</h3>
+                <p>Em todos os eletrônicos até domingo!</p>
+            </div>
+            <div class="promocao-card">
+                <h3>Frete Grátis</h3>
+                <p>Em compras acima de R$ 150,00</p>
+            </div>
+        </div>
+    </section>
 
-</section>
-
-<footer>
-  © 2026 • Todos os direitos reservados
-</footer>
-
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 ShopeeStore. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
